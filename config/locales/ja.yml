@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      article:
+        title: タイトル
+        content: 本文
+  views:
+    pagination:
+      first: '<<'
+      last: '>>'
+      previous: '<'
+      next: '>'
+      truncate: '...'

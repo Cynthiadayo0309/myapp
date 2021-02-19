@@ -1,0 +1,104 @@
+<% content_for(:html_title) { 'CTD CAFE | 期間限定/新メニュー'} %>
+<%= stylesheet_link_tag "articles" %>
+<link href="/assets/aos.css" rel="stylesheet">
+
+<body>
+    <div id="home">
+        <header class="page-header wrapper">
+            <h1 data-aos="fade-right" data-aos-delay="300" data-aos-duration="3000">
+                <a href="/boards">
+                    <img class="logo" src="/assets/cafe_logo.png" alt="ロゴ">
+                    <span class="logo_title">CTD CAFE</span>
+                </a>
+            </h1>
+            <nav data-aos="fade-left" data-aos-delay="300" data-aos-duration="3000">
+                <ul class="main-nav">
+                    <li><a class="button" href="/boards">Home</a></li>
+                    <li><%= link_to 'NEWS', boards_path(anchor: 'News'), class: 'button' %></li>
+                    <li><%= link_to 'CONTACT', boards_path(anchor: 'Contact'), class: 'button' %></li>
+                    <% if logged_in? %>
+                    <li>
+                      <%= link_to "Out", '/login', method: :delete, class: 'button' %>
+                    </li>
+                    <% end %>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div id="menu">
+        <div class="wrapper">
+            <h2 class="page-title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000" data-aos-anchor-placement="center-bottom">期間限定/新メニュー</h2>
+        </div>
+    </div>
+
+    <main>
+        <div class="menu-contents wrapper">
+            <ul class="list container">
+                <% @articles.each do |article| %>
+                    <li class="list-article">
+                        <%= link_to article do %>
+                            <div class="list-image">
+                                <% if article.picture? %>
+                                    <%= image_tag article.picture.thumb.url, class: 'img-thumb' %>
+                                <% end %>
+                            </div>
+                            <div class="list-item">
+                                <h3><%= article.title %></h3>
+                                <span class="list-tag"><%= article.created_at.to_s(:datetime_jp) %></span>
+                                <p><%= article.content %></p>
+                            </div>
+                        <% end %>
+                    </li>
+                    <%= link_to article, method: :delete do %>
+                    　<span class="fa fa-trash"></span>
+                    <% end %>
+                <% end %>
+            </ul>
+
+            <aside>
+                <h3 class="sub-title">キーワードで探す</h3>
+                <div class="search_container">
+                    <%= form_tag(articles_path, method: :get) do %>
+                    <%= text_field_tag :search %>
+                    <%= submit_tag "検索", :title => nil, class: 'input-submit' %>
+                    <% end%>
+                </div>
+
+                <h3 class="sub-title">カテゴリー</h3>
+                <ul class="sub-menu">
+                    <li><a href="/boards/show">お店の紹介</a></li>
+                    <li><a href="/events">イベント</a></li>
+                    <li><a href="#">お客様からの声</a></li>
+                    <li><a href="#">その他</a></li>
+                </ul>
+
+                <h3 class="sub-title">お店について</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquid fugit nihil ab? Dolor repudiandae nihil amet veniam dolorum iste minus ea esse recusandae sapiente nam, cumque eos voluptas minima.
+                </p>
+
+                <% if logged_in? %>
+                    <a>
+                      <%= link_to "記事作成", '/articles/new', class: 'btn-flat-border' %>
+                    </a>
+                <% end %>
+            </aside>
+        </div>
+    </main>
+
+    <%= paginate @articles %>
+
+    <div id="pagetop" class="pagetop">
+        <a href="#" class="pagetopB">TOP</a>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2020 CTD CAFE</small></p>
+        </div>
+    </footer>
+
+    <script src="/assets/aos.js"></script>
+    <script src="/assets/topbutton.js"></script>
+</body>

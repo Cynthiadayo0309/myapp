@@ -1,0 +1,50 @@
+<% content_for(:html_title) { 'CTD CAFE | ログインページ'} %>
+<%= stylesheet_link_tag "sessions.css", :media => "all" %>
+
+<div id="home" class="big-bg">
+        <header id="Home" class="page-header wrapper">
+            <h1 data-aos="fade-right" data-aos-delay="300" data-aos-duration="3000">
+                <a href="/boards">
+                    <img class="logo" src="/assets/cafe_logo.png" alt="ロゴ">
+                    <span class="logo_title">CTD CAFE</span>
+                </a>
+            </h1>
+            <nav data-aos="fade-left" data-aos-delay="300" data-aos-duration="3000">
+                <ul class="main-nav">
+                    <li><%= link_to 'NEWS', boards_path(anchor: 'News'), class: 'button' %></li>
+                    <li><%= link_to 'MENU', boards_path(anchor: 'Menu'), class: 'button' %></li>
+                    <li><%= link_to 'CONTACT', boards_path(anchor: 'Contact'), class: 'button' %></li>
+                </ul>
+            </nav>
+        </header>
+</div>
+
+
+<div id="form">
+  <h1>Login</h1>
+  <%= render 'sessions/alert' %>
+
+  <%= form_for(:session, url: login_path) do |f| %>
+
+    <div class="form-item">
+    <p class="formLabel formTop">Email</p>
+    <%= f.email_field :email, class: 'form-style form-control', value: 'sample@example.com', autocomplete: 'off' %>
+    </div>
+
+    <div class="form-item">
+    <p class="formLabel formTop">Password</p>
+    <%= f.password_field :password, class: 'form-style form-control', value: 'password' %>
+    </div>
+
+    <div class="check-wrapper">
+    <%= f.label :remember_me, class: "checkbox inline" do %>
+    <%= f.check_box :remember_me %>
+    <span>ログイン状態を保持する</span>
+    <% end %>
+    </div>
+
+    <%= f.submit "Log in", class: "login pull-right" %>
+  <% end %>
+</div>
+
+<script src="/assets/sessions.js"></script>

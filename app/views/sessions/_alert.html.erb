@@ -1,0 +1,12 @@
+<% if flash[:danger] %>
+ <% flash.each do |message_type, messaage| %>
+  <div class="alert alert-<%= message_type %>">
+  </div>
+ <% end %>
+ <% else %>
+    <p class="form-msg">
+      こちらは管理人専用ページです<br>
+      ユーザーの方は左上のタイトルマークから<br>
+      サイトに移動してください
+    </p>
+  <% end %>

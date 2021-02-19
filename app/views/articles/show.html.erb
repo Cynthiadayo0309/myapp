@@ -1,0 +1,77 @@
+<% content_for(:html_title) { 'CTD CAFE | 期間限定/新メニュー'} %>
+<%= stylesheet_link_tag "show", :media => "all" %>
+<link href="/assets/aos.css" rel="stylesheet">
+
+
+    <div id="home">
+        <header class="page-header wrapper">
+            <h1 data-aos="fade-right" data-aos-delay="300" data-aos-duration="3000">
+                <a href="/boards">
+                    <img class="logo" src="/assets/cafe_logo.png" alt="ロゴ">
+                    <span class="logo_title">CTD CAFE</span>
+                </a>
+            </h1>
+            <nav data-aos="fade-left" data-aos-delay="300" data-aos-duration="3000">
+                <ul class="main-nav">
+                    <li><a class="button" href="/boards">Home</a></li>
+                    <li><a class="button" href="/articles">Article</a></li>
+                    <% if logged_in? %>
+                    <li>
+                        <%= link_to 'Edit', edit_article_path(@article), class: 'button' %>
+                    </li>
+                    <li>
+                      <%= link_to "Out", '/login', method: :delete, class: 'button' %>
+                    </li>
+                    <% end %>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="introduction-contents wrapper">
+        <article>
+            <header class="post-info" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
+                <h2 class="post-title"><%= @article.title %></h2>
+            </header>
+            <% if @article.picture? %>
+                <%= image_tag @article.picture.url %>
+            <% end %>
+            <p>
+                <%= simple_format(@article.content) %>
+            </p>
+        </article>
+
+        <aside data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
+            <h3 class="sub-title">カテゴリー</h3>
+            <ul class="sub-menu">
+                <li><a href="/articles">期間限定/新メニュー</a></li>
+                <li><a href="#">イベント</a></li>
+                <li><a href="#">お客様からの声</a></li>
+                <li><a href="#">その他</a></li>
+            </ul>
+
+            <h3 class="sub-title">店長コメント</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquid fugit nihil ab? Dolor repudiandae nihil amet veniam dolorum iste minus ea esse recusandae sapiente nam, cumque eos voluptas minima.
+            </p>
+
+            <% if logged_in? %>
+                <a>
+                  <%= link_to "記事作成", '/articles/new', class: 'btn-flat-border' %>
+                </a>
+            <% end %>
+        </aside>
+    </div>
+
+    <div id="pagetop" class="pagetop">
+        <a href="#" class="pagetopB">TOP</a>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2020 CTD CAFE</small></p>
+        </div>
+    </footer>
+
+    <script src="/assets/aos.js"></script>
+    <script src="/assets/topbutton.js"></script>
