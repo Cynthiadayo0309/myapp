@@ -50,8 +50,10 @@
                             </div>
                         <% end %>
                     </li>
-                    <%= link_to article, method: :delete do %>
-                    　<span class="fa fa-trash"></span>
+                    <% if logged_in? %>
+                        <%= link_to article, method: :delete do %>
+                        　<span class="fa fa-trash"></span>
+                        <% end %>
                     <% end %>
                 <% end %>
             </ul>
