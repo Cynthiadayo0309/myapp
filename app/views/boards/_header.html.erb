@@ -1,0 +1,21 @@
+<header id="Home" class="page-header wrapper">
+    <h1 data-aos="fade-right" data-aos-delay="300" data-aos-duration="3000">
+         <a href="/boards">
+            <img class="logo" src="/assets/cafe_logo.png" alt="ロゴ">
+                <span class="logo_title">CTD CAFE</span>
+            </a>
+    </h1>
+    <nav data-aos="fade-left" data-aos-delay="300" data-aos-duration="3000">
+        <ul class="main-nav">
+            <li><a class="button home-btn" href="/boards">Home</a></li>
+            <li><%= link_to 'NEWS', boards_path(anchor: 'News'), class: 'button news-btn' %></li>
+            <li><%= link_to 'MENU', boards_path(anchor: 'Menu'), class: 'button menu-btn' %></li>
+            <li><%= link_to 'CONTACT', boards_path(anchor: 'Contact'), class: 'button contact-btn' %></li>
+            <% if logged_in? %>
+                <li>
+                    <%= link_to "Out", '/login', method: :delete, class: 'button' %>
+                </li>
+            <% end %>
+        </ul>
+    </nav>
+</header>

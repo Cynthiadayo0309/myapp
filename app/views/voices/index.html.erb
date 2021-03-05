@@ -1,0 +1,66 @@
+<% content_for(:html_title) { 'CTD CAFE | お客様の声'} %>
+<%= stylesheet_link_tag "voices", :media => "all" %>
+<link href="/assets/aos.css" rel="stylesheet">
+
+<div id="home">
+        <%= render "boards/header" %>
+</div>
+
+    <div class="introduction-contents wrapper">
+        <article>
+            <header class="post-info" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
+                <h2 class="post-title">よくあるご質問</h2>
+            </header>
+            <img src="/assets/home-bg2.jpg" alt="お店紹介画像" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
+            <div class="voice-container">
+                <div class="question-item">
+                    <h2>Loremについて</h2>
+                    <p class="question">
+                        Q.  Lorem ipsum dolor sit amet?<br>
+                    </p>
+                    <p>
+                        A.<br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima voluptate, esse quo corporis labore eos a laudantium vitae!
+                    </p>
+                </div>
+                <div class="question-item">
+                    <h2>Loremについて</h2>
+                    <p class="question">
+                        Q.  Lorem ipsum dolor sit amet?<br>
+                    </p>
+                    <p>
+                        A.<br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima voluptate, esse quo corporis labore eos a laudantium vitae!
+                    </p>
+                </div>
+                <div class="question-item">
+                    <h2>Loremについて</h2>
+                    <p class="question">
+                        Q.  Lorem ipsum dolor sit amet?<br>
+                    </p>
+                    <p>
+                        A.<br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima voluptate, esse quo corporis labore eos a laudantium vitae!
+                    </p>
+                </div>
+                <div class="question-item">
+                    <h2>Loremについて</h2>
+                    <p class="question">
+                        Q.  Lorem ipsum dolor sit amet?<br>
+                    </p>
+                    <p>
+                        A.<br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima voluptate, esse quo corporis labore eos a laudantium vitae!
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <%= render "boards/aside" %>
+    </div><!-- .news-contents -->
+
+    <%= render "boards/footer" %>
+
+    <script src="/assets/aos.js"></script>
+    <script src="/assets/topbutton.js"></script>
+</div>

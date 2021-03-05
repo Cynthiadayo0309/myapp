@@ -71,7 +71,7 @@ img {
     li {
       margin-left: 36px;
       @media (max-width: 767px) {
-          margin: 0 20px;
+          margin: 0 10px;
       }
     }
 }
@@ -201,10 +201,14 @@ aside {
   }
 }
 
+.event {
+    display: none;
+}
+
 .sub-title {
     font-size: 1.375rem;
     padding: 0 8px 8px;
-    border-bottom: 2px solid #0bd;
+    border-bottom: 2px solid #33691e;
 }
 
 .sub-menu {
@@ -221,7 +225,7 @@ aside {
 }
 
 .sub-menu a:hover {
-  color: #0bd;
+  color: #33691e;
 }
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝

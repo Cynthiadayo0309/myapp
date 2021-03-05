@@ -3,34 +3,15 @@
 <link href="/assets/aos.css" rel="stylesheet">
 
 <div id="home">
-        <header class="page-header wrapper">
-            <h1 data-aos="fade-right" data-aos-delay="300" data-aos-duration="3000">
-                <a href="/boards">
-                    <img class="logo" src="/assets/cafe_logo.png" alt="ロゴ">
-                    <span class="logo_title">CTD CAFE</span>
-                </a>
-            </h1>
-            <nav data-aos="fade-left" data-aos-delay="300" data-aos-duration="3000">
-                <ul class="main-nav">
-                    <li><a class="button" href="/boards">Home</a></li>
-                    <li><%= link_to 'MENU', boards_path(anchor: 'Menu'), class: 'button' %></li>
-                    <li><%= link_to 'CONTACT', boards_path(anchor: 'Contact'), class: 'button' %></li>
-		    <% if logged_in? %>
-                    <li>
-                      <%= link_to "Out", '/login', method: :delete, class: 'button' %>
-                    </li>
-                    <% end %>
-                </ul>
-            </nav>
-        </header>
-    </div>
+        <%= render "header" %>
+</div>
 
     <div class="introduction-contents wrapper">
         <article>
             <header class="post-info" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
-                <h2 class="post-title">CTD CAFEとは</h2>
+                <h2 class="post-title">コーヒーへのこだわり</h2>
             </header>
-            <img src="/assets/home-bg2.jpg" alt="お店紹介画像" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
+            <img src="/assets/home-bg.jpg" alt="お店紹介画像" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima voluptate, esse quo corporis labore eos a laudantium vitae! Nesciunt, veritatis. Voluptatum corrupti nisi distinctio obcaecati eveniet. Consequuntur, autem amet.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti eum ut facilis magnam aperiam esse accusantium ratione, enim iure, voluptas totam hic nam recusandae corrupti doloremque cupiditate! Illum, commodi?
@@ -48,31 +29,10 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima voluptate, esse quo corporis labore eos a laudantium vitae! Nesciunt, veritatis. Voluptatum corrupti nisi distinctio obcaecati eveniet. Consequuntur, autem amet.</p>
         </article>
 
-        <aside data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
-            <h3 class="sub-title">カテゴリー</h3>
-            <ul class="sub-menu">
-                <li><a href="/articles">期間限定/新メニュー</a></li>
-                <li><a href="/events">イベント</a></li>
-                <li><a href="#">お客様からの声</a></li>
-                <li><a href="#">その他</a></li>
-            </ul>
-
-            <h3 class="sub-title">店長コメント</h3>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquid fugit nihil ab? Dolor repudiandae nihil amet veniam dolorum iste minus ea esse recusandae sapiente nam, cumque eos voluptas minima.
-            </p>
-        </aside>
+        <%= render "aside" %>
     </div><!-- .news-contents -->
 
-    <div id="pagetop" class="pagetop">
-        <a href="#" class="pagetopB">TOP</a>
-    </div>
-
-    <footer>
-        <div class="wrapper">
-            <p><small>&copy; 2020 CTD CAFE</small></p>
-        </div>
-    </footer>
+    <%= render "footer" %>
 
     <script src="/assets/aos.js"></script>
     <script src="/assets/topbutton.js"></script>

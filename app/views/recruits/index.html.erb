@@ -1,0 +1,93 @@
+<% content_for(:html_title) { 'CTD CAFE | 採用情報'} %>
+<%= stylesheet_link_tag "recruits", :media => "all" %>
+<link href="/assets/aos.css" rel="stylesheet">
+
+<div id="home">
+        <%= render "boards/header" %>
+</div>
+
+    <div class="introduction-contents wrapper">
+        <article>
+            <header class="post-info" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
+                <h2 class="post-title">採用情報</h2>
+            </header>
+            <img src="/assets/interview.jpg" alt="採用" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
+            <h3 class="recruit-new line">新卒採用</h3>
+            <p class="recruit-intro">
+                20xx年新卒採用がスタートしました。エントリー受付及び、会社説明会の受付を開始します。<br>
+                当社は、はじめにエントリーシートによる書類選考を実施し、面接をして選考をおこないます。<br>
+                会社説明会では、一次面接の予約内容をご案内しています。<br>
+                マイ○ビ20xxやリク○ビ20xxから会社説明会の予約をするようお願いします。<br>
+                皆様の参加を心よりお待ちしています。
+            </p>
+            <div class="newBox">
+                <p class="place">
+                    ◆ 〇〇地区　会社説明会
+                </p>
+                <dl class="place-list">
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①10:00〜&nbsp;②14:00〜</dd>
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①11:00〜&nbsp;②15:00〜</dd>
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①11:00〜&nbsp;②14:00〜</dd>
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①10:00〜&nbsp;②15:00〜</dd>
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①10:00〜&nbsp;②14:00〜</dd>
+                    <br>
+                    <p>場所:本社（東京都〇〇区〇〇〇〇〇〇 111-22-3 〇〇〇〇）</p>
+                </dl>
+                <p class="place">
+                    ◆ 〇〇地区　会社説明会
+                </p>
+                <dl class="place-list">
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①10:00〜&nbsp;②14:00〜</dd>
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①11:00〜&nbsp;②15:00〜</dd>
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①11:00〜&nbsp;②14:00〜</dd>
+                    <br>
+                    <p>場所:〇〇事務所（大阪府〇〇区〇〇〇〇〇〇 999-22-3 〇〇〇〇）</p>
+                </dl>
+                <p class="place">
+                    ◆ 〇〇地区　会社説明会
+                </p>
+                <dl class="place-list">
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①10:00〜&nbsp;②14:00〜</dd>
+                    <dt>○月○日（○曜日）</dt>
+                    <dd>①11:00〜&nbsp;②15:00〜</dd>
+                    <br>
+                    <p>場所:〇〇事務所（福岡県〇〇区〇〇〇〇〇〇 999-22-3 〇〇〇〇）</p>
+                </dl>
+                <p>
+                    募集条項などの詳しい詳細は、「<a href="#">マイ○ビ20xx</a>」や「<a href="#">リク○ビ20xx</a>」を参照してください。
+                    <br>
+                    また、上記の日程で都合がつかないという方は、個別に日程を調整しますので<br>
+                    お気軽にご相談ください。
+                </p>
+            </div>
+            <div class="mid-careerBox">
+                <h3 class="mid-career line">中途採用情報</h3>
+                <p>
+                    募集条項などの詳しい詳細は、「<a href="#">エン○職</a>」や「<a href="#">do○a</a>」を参照してください。<br>
+                    選考をご希望の方は、履歴書・職務経歴書を以下までお送りください。
+                    <br>
+                    〒000-0000<br>
+                    東京都〇〇区〇〇〇〇〇〇 111-22-3<br>
+                    株式会社CTD CAFE&emsp;採用担当宛
+                </p>
+            </div>
+        </article>
+
+        <%= render "boards/aside" %>
+        </aside>
+    </div>
+
+    <%= render "boards/footer" %>
+
+    <script src="/assets/aos.js"></script>
+    <script src="/assets/topbutton.js"></script>
+</div>

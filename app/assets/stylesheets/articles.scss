@@ -76,7 +76,7 @@ ul {
     li {
         margin-left: 36px;
         @media (max-width: 767px) {
-            margin: 0 20px;
+            margin: 0 10px;
         }
     }
 }
@@ -160,7 +160,6 @@ footer {
     height: 180px;
     margin-bottom: 40px;
     @media (max-width: 767px) {
-        background-image: url(/assets/candey.jpg);
         background-size: 100% auto;
         background-color: rgba(255, 255, 255, 0.5);
         background-blend-mode: lighten;
@@ -169,8 +168,12 @@ footer {
     }
     .page-title {
         text-align: center;
+        font-size: 2rem;
         padding-top: 5rem;
         margin-top: 50px;
+        @media (max-width: 767px) {
+            
+        }
     }
 }
 
@@ -297,7 +300,7 @@ main img {
 .fa {
     display: block;
     font-size: 1.825rem;
-    color: #0bd;
+    color: #33691e;
     float: right;
 }
 
@@ -316,16 +319,20 @@ aside {
     }
 }
 
+.menu {
+    display: none;
+}
+
 .sub-title {
     font-size: 1.375rem;
     padding: 0 8px 8px;
-    border-bottom: 2px solid #0bd;
+    border-bottom: 2px solid #33691e;
 }
 
 .search_container {
     position: relative;
     box-sizing: border-box;
-    border: 2px solid #0bd;
+    border: 2px solid #33691e;
     padding: 3px 10px;
     border-radius: 3px;
     height: 2.3em;
@@ -351,7 +358,7 @@ aside {
     cursor: pointer;
     font-family: FontAwesome;
     border: none;
-    background: #0bd;
+    background: #33691e;
     color: #fff;
     position: absolute;
     width: 3.5em;
@@ -375,21 +382,21 @@ aside {
 }
 
 .sub-menu a:hover {
-    color: #0bd;
+    color: #33691e;
 }
 
 .btn-flat-border {
     display: inline-block;
     padding: 0.3em 1em;
     text-decoration: none;
-    color: #0bd;
-    border: solid 2px #0bd;
+    color: #33691e;
+    border: solid 2px #33691e;
     border-radius: 3px;
     transition: .4s;
     margin-top: 30px;
     margin-left: 30px;
     &:hover {
-        background: #0bd;
+        background: #33691e;
         color: white;
     }
 }
@@ -414,10 +421,11 @@ aside {
         margin: 5px;
         box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);
         transition: all .3s ease;
-        &:hover,
-        &.active {
+        &:hover {
+            background-color: #33691e;
+        }
+        a:hover {
             color: #fff;
-            background-color: #0bd;
         }
         &:first-of-type {
             border-radius: 40px 0 0 40px;

@@ -71,7 +71,7 @@ img {
     li {
       margin-left: 36px;
       @media (max-width: 767px) {
-          margin: 0 20px;
+          margin: 0 10px;
       }
     }
 }
@@ -180,8 +180,35 @@ article {
 }
 
 article img {
-    margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.voice-container {
+    display: block;
+}
+
+.question-item h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #33691e;
+    &:after {
+        content: "";
+        display: block;
+        height: 0.25rem;
+        background: -moz-linear-gradient(to right, rgb(51, 105, 30), transparent);
+        background: -webkit-linear-gradient(to right, rgb(51, 105, 30), transparent);
+        background: linear-gradient(to right, rgb(51, 105, 30), transparent);
+    }
+}
+
+.question-item:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.question {
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 article p {
@@ -200,6 +227,10 @@ aside {
     p {
       padding: 12px 10px;
   }
+}
+
+.voice {
+    display: none;
 }
 
 .sub-title {
@@ -225,21 +256,6 @@ aside {
   color: #33691e;
 }
 
-.btn-flat-border {
-    display: inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #33691e;
-    border: solid 2px #33691e;
-    border-radius: 3px;
-    transition: .4s;
-    margin-top: 30px;
-    margin-left: 30px;
-    &:hover {
-        background: #33691e;
-        color: white;
-    }
-}
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
     toppageB
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
