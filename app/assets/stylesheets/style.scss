@@ -170,34 +170,6 @@ img {
     text-transform: none;
 }
 
-.scroll {
-    text-align: center;
-    flex-direction: column;
-}
-
-.scroll-text {
-    text-align: center;
-    margin-top: 160px;
-    @media (max-width: 767px) {
-        margin-top: 70px;
-    }
-}
-
-.scroll-line-black {
-    height: 77px;
-    width: 2px;
-    background-color: #432;
-    position: absolute;
-    bottom: 5rem;
-    left: 50%;
-    @media (max-width: 767px) {
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-    }
-}
-
-
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
     NEWS
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
