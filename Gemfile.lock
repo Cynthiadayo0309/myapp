@@ -62,12 +62,18 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
+    diff-lcs (1.4.4)
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_bot (5.2.0)
+      activesupport (>= 4.2.0)
+    factory_bot_rails (5.2.0)
+      factory_bot (~> 5.2.0)
+      railties (>= 4.2.0)
     ffi (1.14.2)
     fullcalendar-rails (3.9.0.0)
       jquery-rails (>= 4.0.5, < 5.0.0)
@@ -168,6 +174,23 @@ GEM
     request_store (1.5.0)
       rack (>= 1.4)
     rmagick (4.2.1)
+    rspec-core (3.9.3)
+      rspec-support (~> 3.9.3)
+    rspec-expectations (3.9.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-rails (3.9.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.4)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     sass (3.7.4)
@@ -219,6 +242,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   dotenv-rails
+  factory_bot_rails
   fullcalendar-rails
   gon
   jbuilder (~> 2.5)
@@ -233,6 +257,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-i18n
   rmagick
+  rspec-rails (~> 3.8)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
