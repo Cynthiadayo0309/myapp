@@ -351,10 +351,17 @@ aside p {
 
 .grid img {
     border-radius: 5px;
+    width: 300px;
+    height: 200px;
 }
 
 .item {
     border-radius: 5px;
+    width: 300px;
+    height: 260px;
+    p {
+        margin-top: 10px;
+    }
     span {
         margin-left: 10px;
     }

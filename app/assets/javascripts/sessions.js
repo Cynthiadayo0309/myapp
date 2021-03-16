@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    var formInputs = $('input[type="email"],input[type="password"]');
+    const formInputs = $('input[type="email"],input[type="password"]');
     formInputs.focus(function() {
        $(this).parent().children('p.formLabel').addClass('formTop');
        $('div#formWrapper').addClass('darken-bg');

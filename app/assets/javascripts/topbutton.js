@@ -1,12 +1,29 @@
-jQuery(function(){
-	var topBtn = jQuery('#pagetop');
-    		topBtn.hide(); //最初は非表示
-    		jQuery(window).scroll(function() {
-			if (jQuery(this).scrollTop() > 100) { //700以上、下にスクロールされた時
-				topBtn.fadeIn(""); //表示
-			} else { //それ意外は
-				topBtn.fadeOut(""); //非表示
-		}
-	});
+$(function () {
+    const pagetop = $('#pagetop');
+    pagetop.hide();
+
+//ボタンは非表示をデフォルトにする
+
+    $(window).scroll(function () {
+	    if ($(this).scrollTop() > 150) {
+	      pagetop.fadeIn();
+
+//TOPの位置から150pxスクロールするとボタンをフェードインする
+
+	    } else {
+	      pagetop.fadeOut();
+	    }
+    });
+
+//TOPの位置から150px以内に戻るとボタンをフェードアウトする
+
+pagetop.click(function () {
+	$('body,html').animate({
+	    scrollTop: 0
+	}, 800);
+	  return false;
+  });
 });
 
+//ボタンがクリックされたらTOPから0pxの位置までスクロールする
+//スクロールの速さは500ミリ秒
