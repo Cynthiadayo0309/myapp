@@ -81,25 +81,22 @@ img {
     color: #432;
     line-height: 50px;
     overflow: hidden;
-}
-
-.button:hover {
-    color: #fff;
-}
-
-.button::after {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: scale(.5);
-    transform: scale(.5);
-}
-
-.button:hover::after {
-    background: #432;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    &:hover {
+        color: #fff;
+    }
+    &::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+    }
+    &:hover::after {
+        background: #432;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }
 
 .button::before,
@@ -156,7 +153,7 @@ img {
     background-image: url(../assets/home-bg.jpg);
     background-color:rgba(255,255,255,0.3);
     background-blend-mode:lighten;
-    min-height: 100vh;
+    min-height: 85vh;
     position: relative;
 }
 
@@ -169,6 +166,22 @@ img {
 #home .page-title {
     text-transform: none;
 }
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+    shopify
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.shopify-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4% 4%;
+    display: flex;
+    .shopify-item {
+        width: 33.33333%;
+        text-align: center;
+    }
+}
+
+
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
     NEWS
@@ -196,11 +209,61 @@ footer {
     text-align: center;
     padding: 26px 0;
     margin-top: 50px;
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    li {
+        margin: 0 12px;
+    }
+    p {
+        color: #fff;
+        font-size: 0.875rem;
+    }
 }
 
-footer p {
+.nav-button {
+    outline: none;
+    position: relative;
+    z-index: 2;
     color: #fff;
-    font-size: 0.875rem;
+    line-height: 50px;
+    overflow: hidden;
+    &:hover {
+        color: #432;
+    }
+    &::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+    }
+    &:hover::after {
+        background: #fff;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.nav-button::before,
+.nav-button::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: '';
+}
+
+.nav-button,
+.nav-button::before,
+.nav-button::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -284,20 +347,17 @@ aside p {
 .sub-menu {
     margin-bottom: 60px;
     list-style: none;
-}
-
-.sub-menu li {
-    border-bottom: 1px solid #ddd;
-}
-
-.sub-menu a {
-    color: #432;
-    padding: 10px;
-    display: block;
-}
-
-.sub-menu a:hover {
-    color: #33691e;
+    li {
+        border-bottom: 1px solid #ddd;
+    }
+    a {
+        color: #432;
+        padding: 10px;
+        display: block;
+        &:hover {
+            color: #33691e;
+        }        
+    }
 }
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
