@@ -34,6 +34,16 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
+
+  # truncateを実行して処理する
+  DatabaseCleaner.strategy = :truncation
+  DatabaseCleaner.clean_with :truncation
+
+  # exampleが終わる度に実行
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+  
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
