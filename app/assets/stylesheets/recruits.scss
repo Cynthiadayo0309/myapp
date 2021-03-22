@@ -130,6 +130,10 @@ footer {
         display: flex;
         justify-content: center;
         margin-bottom: 2rem;
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
     li {
         margin: 0 12px;
