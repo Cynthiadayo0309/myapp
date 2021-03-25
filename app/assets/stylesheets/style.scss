@@ -43,6 +43,7 @@ img {
 }
 
 .logo_title {
+    font-size: 2rem;
     vertical-align: 40px;
     font-family: cursive;
     color: #432;
@@ -198,6 +199,8 @@ img {
     background-image: url(../assets/news-bg.jpg);
     height: 270px;
     margin-bottom: 40px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 #news .page-title {
@@ -389,7 +392,9 @@ aside p {
     background-image: url(../assets/menu-bg.jpg);
     background-color:rgba(255,255,255,0.3);
     background-blend-mode:lighten;
-    min-height: 100vh;
+    min-height: 85vh;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
 }
 
 .menu-content {
@@ -456,7 +461,9 @@ aside p {
     background-image: url(../assets/contact-bg.jpg);
     background-color:rgba(255,255,255,0.3);
     background-blend-mode:lighten;
-    min-height: 100vh;
+    min-height: 85vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 @media (max-width: 767px) {
