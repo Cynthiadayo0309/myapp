@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'boards', to: 'boards#calendar'
   get 'boards/show', to: 'boards#show'
   get 'events', to: 'events#index'
+  get 'seasons', to: 'seasons#index'
 
   resources :articles  
 

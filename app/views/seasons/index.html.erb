@@ -1,17 +1,17 @@
-<% content_for(:html_title) { 'CTD CAFE | お店の紹介'} %>
-<%= stylesheet_link_tag "introduction", :media => "all" %>
+<% content_for(:html_title) { 'CTD CAFE | 旬の食材メニュー'} %>
+<%= stylesheet_link_tag "seasons", :media => "all" %>
 <link href="/assets/aos.css" rel="stylesheet">
 
 <div id="home">
-        <%= render "header" %>
+        <%= render "boards/header" %>
 </div>
 
     <div class="introduction-contents wrapper">
         <article>
             <header class="post-info" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
-                <h2 class="post-title">コーヒーへのこだわり</h2>
+                <h2 class="post-title">甘夏みかんケーキ</h2>
             </header>
-            <img src="/assets/home-bg.jpg" alt="お店紹介画像" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
+            <img src="/assets/orangecake.jpg" alt="旬の料理" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="700" data-aos-offset="0">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima voluptate, esse quo corporis labore eos a laudantium vitae! Nesciunt, veritatis. Voluptatum corrupti nisi distinctio obcaecati eveniet. Consequuntur, autem amet.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti eum ut facilis magnam aperiam esse accusantium ratione, enim iure, voluptas totam hic nam recusandae corrupti doloremque cupiditate! Illum, commodi?
@@ -28,11 +28,13 @@
             </p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima voluptate, esse quo corporis labore eos a laudantium vitae! Nesciunt, veritatis. Voluptatum corrupti nisi distinctio obcaecati eveniet. Consequuntur, autem amet.</p>
         </article>
-
-        <%= render "aside" %>
     </div>
+        
 
-    <%= render "footer" %>
+        
+    
+
+    <%= render "boards/footer" %>
 
     <script src="/assets/aos.js"></script>
     <script src="/assets/topbutton.js"></script>
