@@ -21,7 +21,7 @@
                         <%= link_to article do %>
                             <div class="list-image">
                                 <% if article.picture? %>
-                                    <%= image_tag article.picture.thumb.url, class: 'img-thumb' %>
+                                    <%= image_tag article.picture.to_s, class: 'img-thumb' %>
                                 <% end %>
                             </div>
                             <div class="list-item">
