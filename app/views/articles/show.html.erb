@@ -34,7 +34,7 @@
                 <h2 class="post-title"><%= @article.title %></h2>
             </header>
             <% if @article.picture? %>
-                <%= image_tag @article.picture.url %>
+                <%= image_tag @article.picture.to_s %>
             <% end %>
             <p>
                 <%= simple_format(@article.content) %>
