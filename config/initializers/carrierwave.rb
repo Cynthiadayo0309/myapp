@@ -14,6 +14,7 @@ CarrierWave.configure do |config|
         path_style: true
     }
     config.fog_public = false
+    config.asset_host = 'https://rails-photo-practice.s3-ap-northeast-1.amazonaws.com/pudding.jpg'
 end
 
 # 日本語の文字化けを防ぐ
