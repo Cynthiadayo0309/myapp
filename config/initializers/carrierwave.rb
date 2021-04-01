@@ -13,7 +13,6 @@ CarrierWave.configure do |config|
         aws_secret_access_key: Rails.application.credentials.aws[:secret_access_key],
         region: ENV['AWS_DEFAULT_REGION']
     }
-    config.asset_host = 'https://test-pictures-backet.s3.amazonaws.com'
 end
 
 # 日本語の文字化けを防ぐ
