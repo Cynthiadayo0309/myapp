@@ -4,7 +4,7 @@ require 'carrierwave/storage/fog'
 
 
 CarrierWave.configure do |config|
-    config.storage :fog
+    config.storage = :fog
     config.fog_provider = 'fog/aws'
     config.fog_directory = ENV['AWS_BUCKET']
     config.fog_credentials = {
@@ -13,6 +13,7 @@ CarrierWave.configure do |config|
         aws_secret_access_key: Rails.application.credentials.aws[:secret_access_key],
         region: ENV['AWS_DEFAULT_REGION']
     }
+    config.asset_host = 'https://test-pictures-backet.s3.amazonaws.com'
 end
 
 # 日本語の文字化けを防ぐ
