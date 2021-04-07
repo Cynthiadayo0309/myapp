@@ -1,24 +1,23 @@
-# README
+# Railsアプリケーションで「写真・サムネイル付き記事投稿機能」「記事の編集・削除の管理機能」「管理人とユーザーを分けるログイン機能」がある架空のカフェサイト
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ポートフォリオサイトで使用した機能を公開。
 
-Things you may want to cover:
+ログインパスワードは一時的に伏せてありますのでご了承ください。
 
-* Ruby version
+機能一覧
 
-* System dependencies
+* ログイン機能（Remember me）
 
-* Configuration
+* コンテンツ機能の動的表示機能（CSS, aos.js）
 
-* Database creation
+* メニュー投稿機能、編集機能（carrierwave, 画像のアップロード先 Amazon AWS S3）
 
-* Database initialization
+* メニュー記事の削除機能
 
-* How to run the test suite
+* ページネーション機能（kaminari）
 
-* Services (job queues, cache servers, search engines, etc.)
+* Docker, Docker-composeによる開発環境(Puma, 開発環境ではMySQL, 本番環境ではPostgreSQL)
 
-* Deployment instructions
+* Herokuへデプロイ
 
-* ...
+* レスポンシブデザイン
