@@ -125,13 +125,19 @@ img {
     text-align: center;
     margin-top: 10%;
     @media (max-width: 767px) {
-        margin-top: 20%;
+        margin-top: 10%;
     }
 }
 
 .home-content p {
     font-size: 1.125rem;
     margin: 10px 0 42px;
+    @media (max-width: 767px) {
+        .br::before {
+            content: "\A";
+            white-space: pre;
+        }
+    }
 }
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -144,6 +150,34 @@ img {
     font-weight: normal;
     @media (max-width: 767px) {
         font-size: 2.5rem;
+    }
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+    Reservation
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.reserveBtn {
+    padding: 18px 32px;
+    font-size: 1.2rem;
+    background: #bc9b5d;
+    border-radius: 5px;
+    color: #fff;
+    &:hover .en {
+        display: none;
+    }
+    .jp {
+        display: none;
+    }
+    &:hover .jp {
+        display: inline;
+    }
+    @media (max-width: 767px) {
+        .en {
+            display: none;
+        }
+        .jp {
+            display: inline;
+        }
     }
 }
 
